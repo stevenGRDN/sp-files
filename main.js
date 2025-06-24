@@ -1,6 +1,6 @@
 import { SuperpoweredGlue, SuperpoweredWebAudio } from '@superpoweredsdk/web';
 
-import { SuperpoweredTrackLoader } from './static/superpowered/SuperpoweredWebAudio.js';
+//import { SuperpoweredTrackLoader } from './static/superpowered/SuperpoweredWebAudio.js';
 
 const minimumSampleRate = 44100;
 
