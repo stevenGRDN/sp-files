@@ -27,7 +27,7 @@ document.querySelector('#loadAssetButton').addEventListener('click', async () =>
   );
 
   console.log(superpowered.downloadAndDecode);
-  console.log(SuperpoweredTrackLoader.downloadAndDecode);
+  //console.log(SuperpoweredTrackLoader.downloadAndDecode);
   superpowered.downloadAndDecode(
     "song.mp3",
     loadedCallback
