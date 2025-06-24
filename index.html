@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <!-- <img class="logo" src="/static/images/superpowered-white.svg" /> -->
+    <div class="controls">
+        <h1 class="demoTitle">Loading and playing audio</h1>
+        <!-- <button id="loadAssetButton" onclick="loadTrack()"> -->
+        <button id="loadAssetButton">
+          Load and play local track
+        </button>
+        <h3 id="trackLoadStatus"></h3>
+        <div id="bootedControls">
+          <span>Player volume</span>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            defaultValue="0.5"
+            oninput="onParamChange('localPlayerVolume', Number(this.value))"
+          />
+          <span>Playback rate</span>
+          <input
+            type="range"
+            min="0.003"
+            max="2"
+            step="0.001"
+            defaultValue="1"
+            oninput="onParamChange('localPlayerRate', Number(this.value))"
+          />
+        </div>
+        <span>Playback pitch</span>
+          <input
+            type="range"
+            min="-1200"
+            max="1200"
+            step="1"
+            defaultValue="0"
+            oninput="onParamChange('localPlayerPitch', Number(this.value))"
+          />
+      </div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
