@@ -35,16 +35,13 @@ class PlayerProcessor extends SuperpoweredWebAudio.AudioWorkletProcessor{
   }
 
   onMessageFromMainScope(message) {
-    console.log("Is Feerst movie?");
     if (message.type === "parameterChange") {
-      console.log("Is Second movie?");
 
       if (message.payload.id === "localPlayerVolume") this.playerGain = message.payload.value;
       else if (message.payload.id === "localPlayerRate") this.player.playbackRate = message.payload.value;
       else if (message.payload.id === "localPlayerPitch") this.player.pitchShiftCents = message.payload.value;
     }
     if (message.SuperpoweredLoaded) {
-      console.log("Is Third movie?");
 
       this.player.pause();
       this.sampleLoaded = true;
